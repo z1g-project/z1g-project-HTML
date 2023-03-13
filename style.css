@@ -441,6 +441,48 @@ section .title::after{
     background: crimson!important;
 }
 
+//*Projects CSS*//
+.projects .title::after{
+    content: "test";
+}
+.projects .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover{
+    background: crimson;
+}
+.projects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover img{
+    border-color: #fff;
+}
+
 /* contact section styling */
 .contact .title::after{
     content: "Get in Touch";
@@ -552,7 +594,6 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
-
 
 /* responsive media query start */
 @media (max-width: 1104px) {
