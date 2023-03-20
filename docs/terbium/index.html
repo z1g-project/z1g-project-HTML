@@ -4,7 +4,7 @@
   <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>z1g Project - Copyright & Licenses</title>
+    <title>z1g Project - Terbium Documentation</title>
     <link rel="icon" href="/assets/img/icon.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -12,9 +12,9 @@
 <meta property="og:type" content="Website">
 <meta property="og:url" content="https://z1g-project.johnglynn2.repl.co">
 <meta property="og:title" content="Project z1g">
-<meta property="og:description" content="The Copyright Info Page of the Official z1g Project!">
+<meta property="og:description" content="The Documentation for Terbium - the Official z1g Project!">
 
-	<meta property="og:image" content="/assets/img/fav_img.png">
+	<meta property="og:image" content="/assets/img/bp.png">
 
                <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, minimum-scale=1, maximum-scale=1">
         <link rel="icon" id="appIcon" type="image/png" href="assets/img/logo.png">
@@ -42,6 +42,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 
 </head>
 <body>
@@ -69,44 +70,42 @@
       <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Welcome to the</div>
-                <div class="text-2">Copyright & Licenses Page</div>
-                
+                <div class="text-2">Terbium Documentation</div>
             </div>
         </div>
     </section>
 
   <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Copyright & Licenses</h2>
+            <h2 class="title">Terbium Documentation</h2>
             <div class="contact-content">
               <div class="column left">
-                    <div class="text">z1g Project Liscenses & Terms</div>
-                    <form action="#apache2">
-                        <div class="button-area">
-                            <a href="/LICENSE"><button type="button">View Liscense</button></a>
-                        </div>
-                    </form>
-                <form action="#z1g-copy">
-                        <div class="button-area">
-                            <a href="/copyright/terms"><button type="button">View Tems</button></a>
-                        </div>
-                    </form>
-                </div>
+                   <md-block>
+                     # Welcome
+                     Welcome to the Terbium Documentation! Here you may find information to deploy and run Terbium yourself!
 
-                <div class="column right">
-                    <div class="text">Other Licenses</div>
-                    <form action="#">
-                        <div class="button-area">
-                            <a href="/copyright/3rdparty/"><button type="button">View 3'rd Party Licenses</button></a>
-                        </div>
-                    </form>
+                     # Deployment
+                     If you need to deploy this project to Replit use the Terbium-replit Version that can be found [Here](https://github.com/z1g-project/terbium-replit) If your using Heroku or Glitch you can simply deploy using their Github Import option and just selecting our repository (https://github.com/z1g-project/bruhprox.git) However Support for These is not fully ready but should be at a stable phase
+
+                     # Creating Apps
+                     If you have sucessfully deployed Terbium or Forked the Github to create apps first go to /static/index.html and scroll down untill about line 95ish under the class `appsDesk` from there to create a OS App (No Proxy) use this code: div class="deskapp" data-appName="ruffle" title="Example App" onclick="new WIN('(icn)[./resources/example.ico]', '(title)[Example App]', '(os)[true]', '(full)[false]', '(appname)[ruffle]', '(link)[https://z1g-project.johnglynn2.repl.co/new]');">
+                        img src="./resources/example.ico" id="vsc" title="Example App" class="appIcon">
+                    </div>
+                     You can also use / instead of HTTPS for the `(link)` variable. If your file requires a Proxy set (os)[false] and it will use the Built in Proxy. **HOWEVER** the (os)[false] variable is not avalible in Terbium for Replit and you must use Proxy Link instead such as https://bruhprox.glitch.me/uv/service/'XOR URL HERE' The Built in Proxy uses BruhProx 6 API and should work fast on the Normal Version of Terbium. Once you have created the Dock shortcut you must add the app to the Windows.js file which is located in /static/js/windows.js and go to line 2119. **DO NOT TAMPER WITH OTHER CODE IN WINDOWS.JS UNLESS YOU KNOW WHAT YOUR DOING THIS COULD RUIN YOUR TERBIUM INSTANCE** Once your there you can insert this code anywhere within the class: case "example":
+        new WIN("(link)[https://z1g-project.johnglynn2.repl.co/new]", "(title)[Example App]", "(icon)[../resources/example.ico]", "(os)[true]", "(fullscreen)[false]", '(appname)[example]');
+        break;
+                     What this code does it allows the ?app=(appname) command to function and also allows your app to be fully recognised by the WebOS in Terminal.
+
+                     # Extra
+                     **More info is coming soon**
+                   </md-block>
                 </div>
             </div>
         </div>
     </section>
   
     <footer>
-        <span>© Copyright 2021-2023 <a href="/copyright/#copyright">z1g Project</a> | All rights reserved.</span>
+        <span>© Copyright 2021-2023 <a href="/copyright/">z1g Project</a> | All rights reserved.</span>
     </footer>
 
     <script src="/script.js"></script>
